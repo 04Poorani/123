@@ -72,18 +72,25 @@ transform:translateY(-3px);
 }
 
 .logo img{
-    width:220px;
+    width:180px;
     height:auto;
 }
 
 .logo-text h3{
     font-size:24px;
 }
+@media(max-width:768px){
+
+.logo img{
+    width:140px;
+}
+
+}
 
 /* HERO */
 
 .hero{
-min-height:120vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -590,7 +597,7 @@ height:300px;
 }
 .training-hero{
 
-min-height:120vh;
+min-height:100vh;
 
 display:flex;
 justify-content:center;
@@ -642,7 +649,7 @@ text-align:center;
 
 .roadmap-hero{
 
-min-height:120vh;
+min-height:100vh;
 
 display:flex;
 
@@ -851,11 +858,23 @@ font-size:45px;
 }
 
 }
+@media(max-width:768px){
+
+.timeline-dot{
+    left:30px;
+}
+
+.timeline-card{
+    width:calc(100% - 80px);
+    margin-left:80px;
+}
+
+}
 /* PLACEMENT PAGE */
 
 .placement-hero{
 
-min-height:120vh;
+min-height:100vh;
 
 display:flex;
 
@@ -1178,7 +1197,7 @@ line-height:1.8;
 /* ABOUT PAGE */
 
 .about-hero{
-min-height:120vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -1491,12 +1510,23 @@ width:350px;
 height:350px;
 }
 }
+@media(max-width:900px){
+
+.about-showcase{
+    grid-template-columns:1fr;
+}
+
+.showcase-image img{
+    height:300px;
+}
+
+}
 /* ==========================
    CONTACT PAGE
 ========================== */
 
 .contact-hero{
-    min-height:120vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -1690,7 +1720,13 @@ height:350px;
     box-shadow:
     0 0 20px rgba(123,97,255,.25);
 }
+@media(max-width:768px){
 
+.contact-form{
+    padding:25px;
+}
+
+}
 /* ==========================
    CONTACT + MAP
 ========================== */
@@ -1822,6 +1858,7 @@ height:350px;
         font-size:17px;
     }
 }
+
 
 
 .feature-card,
@@ -2514,4 +2551,83 @@ footer a{
 
 footer a:hover{
     color:#ffffff;
+}
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+@media(max-width:992px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#000;
+        flex-direction:column;
+        gap:20px;
+        padding:30px;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
+.hero-content h1,
+.training-content h1,
+.roadmap-content h1,
+.placement-content h1,
+.about-content h1,
+.contact-content h1{
+    font-size:clamp(3rem,6vw,5rem);
+}
+@media(max-width:768px){
+
+.enroll-btn,
+.primary-btn,
+.secondary-btn,
+.cta-btn,
+.banner-btn{
+
+    width:100%;
+    text-align:center;
+}
+
+}
+/* UNIVERSAL RESPONSIVE HEADINGS */
+
+.hero-content h1,
+.training-content h1,
+.roadmap-content h1,
+.placement-content h1,
+.about-content h1,
+.contact-content h1{
+
+    font-size:clamp(3rem,6vw,5rem);
+
+}
+
+.why-monarch h2,
+.training-modules h2,
+.companies h2,
+.about-intro h2,
+.showcase-text h2,
+.mission-side h2,
+.vision-side h2,
+.cta-content h2,
+.section-heading h2,
+.timeline-section h2,
+.contact-form h2,
+.contact-info h2{
+
+    font-size:clamp(2rem,4vw,4rem);
+
 }
