@@ -2779,3 +2779,43 @@ footer a:hover{
     }
 
 }
+.menu-toggle{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#070111;
+        flex-direction:column;
+        padding:20px 0;
+        gap:15px;
+        z-index:999;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .enroll-btn{
+        display:none;
+    }
+}
