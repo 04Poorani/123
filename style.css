@@ -3831,3 +3831,82 @@ body{
     }
 
 }
+/* ==================================
+   UNIFORM CARD COLOR
+================================== */
+
+.feature-card,
+.program-card,
+.support-card,
+.process-card,
+.timeline-card,
+.module-box,
+.content,
+.contact-info,
+.contact-form,
+.stat-card{
+
+    background:#090027 !important;
+
+    border:1px solid rgba(123,97,255,.18) !important;
+
+    border-radius:28px !important;
+
+    box-shadow:
+    0 0 15px rgba(123,97,255,.08) !important;
+}
+
+/* HOVER EFFECT */
+
+.feature-card:hover,
+.program-card:hover,
+.support-card:hover,
+.process-card:hover,
+.timeline-card:hover,
+.module-box:hover,
+.content:hover,
+.contact-info:hover,
+.contact-form:hover,
+.stat-card:hover{
+
+    background:#0B0520 !important;
+
+    border-color:#7B61FF !important;
+
+    box-shadow:
+    0 0 10px rgba(123,97,255,.35),
+    0 0 25px rgba(123,97,255,.20),
+    0 0 50px rgba(123,97,255,.10) !important;
+
+    transform:translateY(-8px);
+}
+
+/* TEXT COLORS */
+
+.feature-card h3,
+.program-card h3,
+.support-card h3,
+.process-card h3,
+.timeline-card h3,
+.module-box h3,
+.content h3,
+.contact-info h2,
+.contact-form h2,
+.stat-card h2{
+
+    color:#ffffff !important;
+}
+
+.feature-card p,
+.program-card p,
+.support-card p,
+.process-card p,
+.timeline-card p,
+.module-box p,
+.content p,
+.contact-info p,
+.contact-details div,
+.stat-card p{
+
+    color:#bdbdbd !important;
+}
