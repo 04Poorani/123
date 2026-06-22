@@ -3831,9 +3831,24 @@ body{
     }
 
 }
-/* ==================================
-   UNIFORM CARD COLOR
-================================== */
+.social-links{
+    margin-top:15px;
+}
+
+.social-links a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    margin:0 8px;
+}
+
+.social-links a:hover{
+    opacity:.7;
+}
+/* ===================================
+   UNIVERSAL DARK PURPLE GLASS CARD
+=================================== */
 
 .feature-card,
 .program-card,
@@ -3842,21 +3857,64 @@ body{
 .timeline-card,
 .module-box,
 .content,
-.contact-info,
 .contact-form,
+.contact-info,
 .stat-card{
 
-    background:#090027 !important;
+    position:relative;
+    overflow:hidden;
 
-    border:1px solid rgba(123,97,255,.18) !important;
+    background:#070014 !important;
+
+    border:1px solid rgba(90,70,180,.18) !important;
 
     border-radius:28px !important;
 
+    backdrop-filter:blur(15px);
+
+    transition:all .4s ease;
+
     box-shadow:
-    0 0 15px rgba(123,97,255,.08) !important;
+    0 0 0 1px rgba(255,255,255,.03),
+    0 10px 30px rgba(0,0,0,.35);
 }
 
-/* HOVER EFFECT */
+/* GLASS REFLECTION */
+
+.feature-card::before,
+.program-card::before,
+.support-card::before,
+.process-card::before,
+.timeline-card::before,
+.module-box::before,
+.content::before,
+.contact-form::before,
+.contact-info::before,
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+    left:-60%;
+
+    width:60%;
+    height:300%;
+
+    background:linear-gradient(
+        rgba(255,255,255,.10),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    transition:.8s ease;
+
+    pointer-events:none;
+}
+
+/* HOVER */
 
 .feature-card:hover,
 .program-card:hover,
@@ -3865,48 +3923,33 @@ body{
 .timeline-card:hover,
 .module-box:hover,
 .content:hover,
-.contact-info:hover,
 .contact-form:hover,
+.contact-info:hover,
 .stat-card:hover{
 
-    background:#0B0520 !important;
+    background:#111111 !important;
 
-    border-color:#7B61FF !important;
+    border-color:rgba(180,180,180,.20) !important;
+
+    transform:translateY(-6px);
 
     box-shadow:
-    0 0 10px rgba(123,97,255,.35),
-    0 0 25px rgba(123,97,255,.20),
-    0 0 50px rgba(123,97,255,.10) !important;
-
-    transform:translateY(-8px);
+    0 15px 35px rgba(0,0,0,.50),
+    0 0 20px rgba(255,255,255,.05);
 }
 
-/* TEXT COLORS */
+/* MOVING GLASS EFFECT */
 
-.feature-card h3,
-.program-card h3,
-.support-card h3,
-.process-card h3,
-.timeline-card h3,
-.module-box h3,
-.content h3,
-.contact-info h2,
-.contact-form h2,
-.stat-card h2{
+.feature-card:hover::before,
+.program-card:hover::before,
+.support-card:hover::before,
+.process-card:hover::before,
+.timeline-card:hover::before,
+.module-box:hover::before,
+.content:hover::before,
+.contact-form:hover::before,
+.contact-info:hover::before,
+.stat-card:hover::before{
 
-    color:#ffffff !important;
-}
-
-.feature-card p,
-.program-card p,
-.support-card p,
-.process-card p,
-.timeline-card p,
-.module-box p,
-.content p,
-.contact-info p,
-.contact-details div,
-.stat-card p{
-
-    color:#bdbdbd !important;
+    left:130%;
 }
